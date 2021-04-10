@@ -1,0 +1,33 @@
+Helpful Keys
+1) Open and run an ubuntu shell in docker: docker run --rm -it ubuntu /bin/bash
+1) Open and run an ubuntu shell in docker and allow persist: docker run -it ubuntu /bin/bash
+2) Show running containers: docker ps
+3) Show all containers: docker ps -a
+4) Enter containers shell: docker exec -it laughing_black /bin/bash
+5) Rename a docker image:  docker image tag a980500eb808 mynode:latest
+6) Make Image: docker run --publish HOSTPORT:CONTAINERPORT containerName
+7) Remove the Imgaes: docker image rm a980500eb808 71fc5de4031e 26b77e58432b
+8) List images: docker images
+9) Build container from docker image: docker build -t <username>/app_name .
+10) docker run -p HOSTPORT:CONTAINERPORT -d containerName
+11) Remove container: docker container rm 993b28ef0fa3
+12) Log containers: docker logs 4850faf899ba
+13) Start docker container: docker start xxxxxxxx
+14) Stop docker container: docker Stop xxxxxxxx
+
+//Actual Steps
+A) Build Dockerfile
+B) Build container from Dockerfile: docker build -t <username>/app_name .
+C) Permanently run the container:  docker run -p 8080:8080 python-docker-dev
+D) Temporarily run the constainer:  docker run ---rm -it p 8080:8080 python-docker-dev
+E) Enter into file and into temporary image folder: docker run --rm -it -p 8080:8080 -v $(pwd):/app python-docker-dev bash
+F) Enter only into temporary image file:  docker run --rm -it -p 8080:8080 python-docker-dev bash
+G) Enter into "CONATINER" (Ensure container is up first): docker exec -it 4850faf899ba /bin/bash
+
+
+Note:
+You can use cat if installed, with the > caracter. Here is the manipulation :
+cat > file_to_edit
+#1 Write or Paste you text
+#2 don't forget to leave a blank line at the end of file
+#3 Ctrl + C to apply configuration

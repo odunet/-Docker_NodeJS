@@ -1,0 +1,14 @@
+{
+  "name": "dockertutorial",
+  "version": "1.0.0",
+  "description": "dockerTutorial",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Ayo",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
